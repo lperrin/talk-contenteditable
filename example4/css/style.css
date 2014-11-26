@@ -1,0 +1,72 @@
+body {
+  padding: 40px;
+  color: #444;
+}
+
+* {
+  outline: 0;
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
+.editor {
+  width: 350px;
+  margin: 0 auto;
+  border: 1px solid #888;
+}
+
+.toolbar {
+  padding: 10px;
+  border-bottom: 1px solid #888;
+}
+
+.toolbar button {
+  height: 30px;
+  -webkit-appearance: none;
+  font-size: 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.toolbar button[data-state] {
+  width: 30px;
+}
+
+.toolbar button[data-state=bold] {
+  font-weight: bold;
+}
+
+.toolbar button[data-state=italic] {
+  font-style: italic;
+}
+
+.toolbar button[data-state=underline] {
+  text-decoration: underline;
+}
+
+.toolbar button:hover {
+  border: 1px solid #aaa;
+}
+
+.toolbar button:active, .toolbar button.active {
+  color: #2D7ABB;
+  text-shadow: rgba(0, 0, 225, 0.3) 0 0 2px;
+}
+
+[contenteditable=true] {
+  padding: 10px;
+  min-height: 300px;
+}
+
+[contenteditable=true]:empty::before {
+  content: attr(placeholder);
+  display: inline;
+
+  color: #aaa;
+  font-weight: 300;
+}
+
+.modal .modal-body input {
+  border: 0;
+  width: 100%;
+}

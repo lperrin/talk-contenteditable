@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/editor.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="modal fade" id="prompt-url" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Enter the Internet Address (URL) for this link.</h4>
+          </div>
+
+          <div class="modal-body">
+            <input type="text">
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Insert link</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="editor">
+      <div class="toolbar">
+        <button data-state="bold">B</button>
+        <button data-state="italic">I</button>
+        <button data-state="underline">U</button>
+        <button data-action="www" data-toggle="modal" data-target="#prompt-url">www</button>
+      </div>
+      <div contenteditable="true" placeholder="Tell me something..."></div>
+    </div>
+  </body>
+</html>
